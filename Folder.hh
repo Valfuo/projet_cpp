@@ -8,32 +8,34 @@
 
 using namespace std;
 
+
+// ==========================================================================
+//								CLASSE FOLDER								|
+// ==========================================================================
+
 class Folder{
 
-public:
-	string name; 
-	Folder* prec;
-	list<Folder> suiv;
-	list<Object*> obj;
-	
-	Folder(const string name);
-	Folder(const string name, Folder * prec);
-	Folder(const Folder& rhs);
-	void ls();
-	Folder cd(string cible);
-	void open(string cible);
-	~Folder(){};
-	Folder& operator=(const Folder& F);
-	
-	friend void swap(Folder& first, Folder& second){
-        using std::swap;
-        swap(first.name, second.name);
-        swap(first.prec, second.prec);
-        swap(first.suiv, second.suiv);
-        swap(first.obj, second.obj);
-   };
+	public:
+		string name; 
+		Folder* prec;
+		list<Folder> suiv;
+		list<Object*> obj;
+		
+		Folder(const string name);
+		Folder(const string name, Folder * prec);
+		Folder(const Folder& rhs);
+		
+		void ls() const;
+		Folder cd(string cible);
+		void open(string cible) const;
+		void info(string cible) const;
+		~Folder(){};
+		Folder& operator=(const Folder& F);
+	private:
+		void swap(Folder& first, Folder& second);
 };
 
-
+// ==========================================================================
+// ==========================================================================
 
 #endif //__FOLDER_HH__

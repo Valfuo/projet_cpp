@@ -1,24 +1,29 @@
-#ifndef __PASSWORD_HH__
-#define __PASSWORD_HH__
+#ifndef __MAILBOX_HH__
+#define __MAILBOX_HH__
+#include "Object.hh"
 #include "Application.hh"
+#include <gtkmm.h>	
+#include <list>
+#include <string>
 
 using namespace std;
 
+
 // ==========================================================================
-//							CLASSE PASSWORD									|
+//							CLASSE MAILBOX									|
 //						 hérite de Application								|
 // ==========================================================================
 
 
-class Password : public Application{
+class Mailbox : public Application{
 
 	public :
-		Password(string name, string user, int length, int width, string date, list<Object*>& obj): 
+		Mailbox(string name, string user, int length, int width, string date, list<Object*>& obj): 
 				Application(name, user, length, width, date, obj){};
-		void open() const;	
 		
+		void open() const;
 };
 // ==========================================================================
 // ==========================================================================
 
-#endif // __PASSWORD_HH__
+#endif // __MAILBOX_HH__

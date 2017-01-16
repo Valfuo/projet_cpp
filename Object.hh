@@ -1,27 +1,35 @@
 #ifndef __OBJECT_HH__
 #define __OBJECT_HH__
 #include <iostream>
+#include <list>
 
 using namespace std;
 
+
+// ==========================================================================
+//								CLASSE OBJECT								|
+// ==========================================================================
 
 class Object{
 	
 	protected :
 		string name;
-		bool readEnable;
 		string user;
-
-		virtual void open() const = 0;
-//		virtual void getInfos()const = 0;
-		Object(string name, bool readEnable, string user): 	name(name), 
-															readEnable(readEnable), 
-															user(user){};
-															
+		string date;
+		Object(string name, string user, list<Object*>& obj);
+		Object(string name, string user, string date, list<Object*>& obj);													
+	
 	public :
+		virtual void getInfos()const = 0;
+		virtual string printColorName() const = 0;
+		virtual void open() const = 0;
 		string getName(){return name;};
-		void publicOpen(){open();};
 		~Object(){};
+	
+		
 };
+
+// ==========================================================================
+// ==========================================================================
 
 #endif // __OBJECT_HH__
