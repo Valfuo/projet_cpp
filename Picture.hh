@@ -21,6 +21,7 @@ class Picture : public Object{
 		void open() const;
 		string printColorName() const { return ("\e[1;35m" + name);}
 		void getInfos() const;	
+		~Picture(){};
 	
 };
 // ==========================================================================

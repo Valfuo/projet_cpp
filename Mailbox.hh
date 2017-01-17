@@ -22,6 +22,7 @@ class Mailbox : public Application{
 				Application(name, user, length, width, date, obj){};
 		
 		void open() const;
+		~Mailbox(){};
 };
 // ==========================================================================
 // ==========================================================================

@@ -21,6 +21,7 @@ class protectedPicture : public Picture{
 		void open() const;
 		void getInfos() const;	
 		string printColorName() const { return ("\e[1;35m" + name + "\e[0m*" );}
+		~protectedPicture(){};
 	
 };
 // ==========================================================================

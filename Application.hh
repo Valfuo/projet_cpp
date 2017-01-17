@@ -11,7 +11,8 @@ using namespace std;
 
 class Application: public Object{
 	
-	private : 
+	public :
+		~Application(){};
 		
 	protected :
 		int length;

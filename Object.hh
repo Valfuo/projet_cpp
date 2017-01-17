@@ -24,7 +24,7 @@ class Object{
 		virtual string printColorName() const = 0;
 		virtual void open() const = 0;
 		string getName(){return name;};
-		~Object(){};
+		
 	
 		
 };

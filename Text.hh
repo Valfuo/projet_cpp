@@ -20,6 +20,7 @@ class Text : public Object{
 		void open() const;
 		string printColorName() const { return ("\e[0;37m" + name);}
 		void getInfos() const;	
+		~Text(){};
 };
 // ==========================================================================
 // ==========================================================================

@@ -16,6 +16,7 @@ class Password : public Application{
 		Password(string name, string user, int length, int width, string date, list<Object*>& obj): 
 				Application(name, user, length, width, date, obj){};
 		void open() const;	
+		~Password(){};
 		
 };
 // ==========================================================================
